@@ -215,6 +215,9 @@ Input the new PostgreSQL values
 
 
 
+![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-AzureCosmosDB-for-PostgreSQLv1/assets/32194879/05f2844a-a610-4c2f-936b-7f28b7ee3976)
+
+
 Review and create the account. 
 
 
