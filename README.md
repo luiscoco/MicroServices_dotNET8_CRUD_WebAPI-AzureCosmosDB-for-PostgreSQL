@@ -6,7 +6,7 @@
 
 - Install .NET SDK 8.0.1
 
-- Install Entity Framework Core tools reference - .NET Core CLI
+- Install Entity Framework Core tools reference - .NET Core CLI:
 
 **dotnet ef** can be installed as either a global or local tool. Most developers prefer installing dotnet ef as a global tool using the following command:
 
