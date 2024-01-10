@@ -6,7 +6,7 @@
 
 - Install .NET SDK 8.0.1
 
-- Install Entity Framework Core tools reference - .NET Core CLI:
+- Install Entity Framework Core tools reference - .NET Core CLI: https://learn.microsoft.com/en-us/ef/core/cli/dotnet
 
 **dotnet ef** can be installed as either a global or local tool. Most developers prefer installing dotnet ef as a global tool using the following command:
 
@@ -24,6 +24,12 @@ Before you can use the tools on a specific project, you'll need to add this pack
 
 ```
 dotnet add package Microsoft.EntityFrameworkCore.Design
+```
+
+Run the following commands to verify that EF Core CLI tools are correctly installed:
+
+```
+dotnet ef
 ```
 
 ## 1. Create .NET8 CRUD WebAPI for PostgreSQL
@@ -286,6 +292,24 @@ You might need to use the Azure Portal or Cosmos DB SDK for this step.
 After setting up your Azure Cosmos DB for PostgreSQL, you'll need to retrieve the connection string to use in your .NET application. 
 
 You can find this in the Azure Portal under your Cosmos DB account's "Connection String" section.
+
+## 6. Migrate the database
+
+Run this command for creating the initial migration
+
+```
+dotnet ef migrations add InitialCreate
+```
+
+![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-AzureCosmosDB-for-PostgreSQLv1/assets/32194879/c01166cc-9308-40e3-baad-b989b017c8cc)
+
+Or this command for updating the migartion
+
+```
+
+```
+
+## 7. Verify your application
 
 
 
