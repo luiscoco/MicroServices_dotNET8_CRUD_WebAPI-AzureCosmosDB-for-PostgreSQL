@@ -1,5 +1,31 @@
 # How to create a .NET8 CRUD WebAPI Azure CosmosDB for PostgreSQL MicroService
 
+## 0. Prerequisites
+
+- Install Visual Studio 2022 Community Edition
+
+- Install .NET SDK 8.0.1
+
+- Install Entity Framework Core tools reference - .NET Core CLI
+
+**dotnet ef** can be installed as either a global or local tool. Most developers prefer installing dotnet ef as a global tool using the following command:
+
+```
+dotnet tool install --global dotnet-ef
+```
+
+Update the tool using the following command:
+
+```
+dotnet tool update --global dotnet-ef
+```
+
+Before you can use the tools on a specific project, you'll need to add this package to your application
+
+```
+dotnet add package Microsoft.EntityFrameworkCore.Design
+```
+
 ## 1. Create .NET8 CRUD WebAPI for PostgreSQL
 
 **Step 1**: Create a New .NET Web API Project. Open a command line interface (CLI).
