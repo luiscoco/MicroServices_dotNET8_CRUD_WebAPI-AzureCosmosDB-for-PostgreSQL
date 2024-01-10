@@ -1,5 +1,37 @@
 # How to create a .NET8 CRUD WebAPI Azure CosmosDB for PostgreSQL MicroService
 
+## 0. Prerequisites
+
+- Install Visual Studio 2022 Community Edition
+
+- Install .NET SDK 8.0.1
+
+- Install Entity Framework Core tools reference - .NET Core CLI: https://learn.microsoft.com/en-us/ef/core/cli/dotnet
+
+**dotnet ef** can be installed as either a global or local tool. Most developers prefer installing dotnet ef as a global tool using the following command:
+
+```
+dotnet tool install --global dotnet-ef
+```
+
+Update the tool using the following command:
+
+```
+dotnet tool update --global dotnet-ef
+```
+
+Before you can use the tools on a specific project, you'll need to add this package to your application
+
+```
+dotnet add package Microsoft.EntityFrameworkCore.Design
+```
+
+Run the following commands to verify that EF Core CLI tools are correctly installed:
+
+```
+dotnet ef
+```
+
 ## 1. Create .NET8 CRUD WebAPI for PostgreSQL
 
 **Step 1**: Create a New .NET Web API Project. Open a command line interface (CLI).
@@ -161,6 +193,8 @@ Go to Azure Portal and sign in with your Azure account.
 
 Create a New Resource:
 
+![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-AzureCosmosDB-for-PostgreSQLv1/assets/32194879/7b95e62f-731b-44ad-880b-633c0f7ef1e2)
+
 Click on "**Create a resource**" in the top left corner of the dashboard.
 
 ![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-AzureCosmosDB-for-PostgreSQL/assets/32194879/5a5e735e-fd1b-4626-82ae-9b88b080ca8e)
@@ -185,19 +219,55 @@ Choose the API as "**Azure Cosmos DB for PostgreSQL**".
 
 Input the new PostgreSQL values
 
+![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-AzureCosmosDB-for-PostgreSQLv1/assets/32194879/f6b1b233-83e7-460f-8ef2-433fa3d33261)
 
+![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-AzureCosmosDB-for-PostgreSQLv1/assets/32194879/05f2844a-a610-4c2f-936b-7f28b7ee3976)
+
+![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-AzureCosmosDB-for-PostgreSQLv1/assets/32194879/bd82dfd6-6970-45d6-a9ae-4161ab407a82)
 
 Review and create the account. 
 
-
+![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-AzureCosmosDB-for-PostgreSQLv1/assets/32194879/75b71712-7e40-4cf6-bf56-d9d831cdd40e)
 
 Once your account is created, go to it in the Azure portal.
 
+![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-AzureCosmosDB-for-PostgreSQLv1/assets/32194879/eaeefe3f-a9d1-4fc5-8bb1-9335f13ec30c)
+
 Under "**Quick start (preview)**" create a new database and a container within that database.
 
-Specify details like container id (e.g., "Books"), partition key, etc.
+![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-AzureCosmosDB-for-PostgreSQLv1/assets/32194879/226bbe26-cfff-48eb-a08d-39239ffd844b)
 
-## 3. Create Azure CosmosDB for PostgreSQL with Azure CLI
+## 3. Copy the Connection String in appsettings.json file
+
+![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-AzureCosmosDB-for-PostgreSQLv1/assets/32194879/9a6b97c2-2ef5-49a6-ba6e-1d49fe0fdc80)
+
+**IMPORTANT NOTE**: Do not forget to input your PASSWORD (Password=Luiscoco123456) in the connection string, by default is not set.
+
+**appsettings.json**
+
+```json
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "MyPostgresDb": "Server=c-mypostgresql.x7wzviwo42ae6e.postgres.cosmos.azure.com;Database=citus;Port=5432;User Id=citus;Password=Luiscoco123456;Ssl Mode=Require;"
+  }
+}
+```
+
+## 4. Add the FireWall rules
+
+![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-AzureCosmosDB-for-PostgreSQLv1/assets/32194879/280da660-6ed8-4c7b-b963-a24ecbf9abb4)
+
+![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-AzureCosmosDB-for-PostgreSQLv1/assets/32194879/dd6ca270-1f61-4c6c-af14-18581a6237e2)
+
+
+## 5. Create Azure CosmosDB for PostgreSQL with Azure CLI
 
 Ensure you have the Azure CLI installed and you're logged in. If not, you can download it from the Azure CLI website and log in using az login.
 
@@ -222,6 +292,28 @@ You might need to use the Azure Portal or Cosmos DB SDK for this step.
 After setting up your Azure Cosmos DB for PostgreSQL, you'll need to retrieve the connection string to use in your .NET application. 
 
 You can find this in the Azure Portal under your Cosmos DB account's "Connection String" section.
+
+## 6. Migrate the database
+
+Run this command for creating the initial migration
+
+```
+dotnet ef migrations add InitialCreate
+```
+
+![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-AzureCosmosDB-for-PostgreSQLv1/assets/32194879/c01166cc-9308-40e3-baad-b989b017c8cc)
+
+Or this command for updating the migartion
+
+```
+dotnet ef database update InitialCreate
+```
+
+## 7. Verify your application
+
+http://localhost:5270/swagger/index.html
+
+![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-AzureCosmosDB-for-PostgreSQLv1/assets/32194879/b5cadcae-0a11-4326-80e0-860778170f6a)
 
 
 
