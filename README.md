@@ -231,7 +231,18 @@ Under "**Quick start (preview)**" create a new database and a container within t
 
 ![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-AzureCosmosDB-for-PostgreSQLv1/assets/32194879/226bbe26-cfff-48eb-a08d-39239ffd844b)
 
-## 3. Create Azure CosmosDB for PostgreSQL with Azure CLI
+## 3. Copy the Connection String in appsettings.json file
+
+
+
+## 4. Add the FireWall rules
+
+![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-AzureCosmosDB-for-PostgreSQLv1/assets/32194879/280da660-6ed8-4c7b-b963-a24ecbf9abb4)
+
+![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-AzureCosmosDB-for-PostgreSQLv1/assets/32194879/dd6ca270-1f61-4c6c-af14-18581a6237e2)
+
+
+## 5. Create Azure CosmosDB for PostgreSQL with Azure CLI
 
 Ensure you have the Azure CLI installed and you're logged in. If not, you can download it from the Azure CLI website and log in using az login.
 
