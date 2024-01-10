@@ -218,7 +218,7 @@ Enter an account name.
 
 Choose the API as "**Azure Cosmos DB for PostgreSQL**".
 
-![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-AzureCosmosDB-for-PostgreSQL/assets/32194879/3b1483fa-6af8-47b0-a12c-54da5bedea96)
+
 
 Input the new PostgreSQL values
 
