@@ -187,6 +187,8 @@ Go to Azure Portal and sign in with your Azure account.
 
 Create a New Resource:
 
+![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-AzureCosmosDB-for-PostgreSQLv1/assets/32194879/7b95e62f-731b-44ad-880b-633c0f7ef1e2)
+
 Click on "**Create a resource**" in the top left corner of the dashboard.
 
 ![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-AzureCosmosDB-for-PostgreSQL/assets/32194879/5a5e735e-fd1b-4626-82ae-9b88b080ca8e)
