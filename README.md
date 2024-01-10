@@ -311,6 +311,10 @@ dotnet ef database update InitialCreate
 
 ## 7. Verify your application
 
+http://localhost:5270/swagger/index.html
+
+![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-AzureCosmosDB-for-PostgreSQLv1/assets/32194879/b5cadcae-0a11-4326-80e0-860778170f6a)
+
 
 
 
