@@ -217,11 +217,11 @@ Input the new PostgreSQL values
 
 ![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-AzureCosmosDB-for-PostgreSQLv1/assets/32194879/05f2844a-a610-4c2f-936b-7f28b7ee3976)
 
-
+![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-AzureCosmosDB-for-PostgreSQLv1/assets/32194879/bd82dfd6-6970-45d6-a9ae-4161ab407a82)
 
 Review and create the account. 
 
-
+![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-AzureCosmosDB-for-PostgreSQLv1/assets/32194879/75b71712-7e40-4cf6-bf56-d9d831cdd40e)
 
 Once your account is created, go to it in the Azure portal.
 
