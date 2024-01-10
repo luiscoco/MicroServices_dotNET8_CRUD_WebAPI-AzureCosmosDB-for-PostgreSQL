@@ -233,7 +233,26 @@ Under "**Quick start (preview)**" create a new database and a container within t
 
 ## 3. Copy the Connection String in appsettings.json file
 
+![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-AzureCosmosDB-for-PostgreSQLv1/assets/32194879/9a6b97c2-2ef5-49a6-ba6e-1d49fe0fdc80)
 
+**IMPORTANT NOTE**: Do not forget to input your PASSWORD (Password=Luiscoco123456) in the connection string, by default is not set.
+
+**appsettings.json**
+
+```json
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "MyPostgresDb": "Server=c-mypostgresql.x7wzviwo42ae6e.postgres.cosmos.azure.com;Database=citus;Port=5432;User Id=citus;Password=Luiscoco123456;Ssl Mode=Require;"
+  }
+}
+```
 
 ## 4. Add the FireWall rules
 
