@@ -225,9 +225,11 @@ Review and create the account.
 
 Once your account is created, go to it in the Azure portal.
 
+![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-AzureCosmosDB-for-PostgreSQLv1/assets/32194879/eaeefe3f-a9d1-4fc5-8bb1-9335f13ec30c)
+
 Under "**Quick start (preview)**" create a new database and a container within that database.
 
-Specify details like container id (e.g., "Books"), partition key, etc.
+![image](https://github.com/luiscoco/MicroServices_dotNET8_CRUD_WebAPI-AzureCosmosDB-for-PostgreSQLv1/assets/32194879/226bbe26-cfff-48eb-a08d-39239ffd844b)
 
 ## 3. Create Azure CosmosDB for PostgreSQL with Azure CLI
 
