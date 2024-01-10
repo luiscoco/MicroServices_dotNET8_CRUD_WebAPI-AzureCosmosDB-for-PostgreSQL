@@ -306,7 +306,7 @@ dotnet ef migrations add InitialCreate
 Or this command for updating the migartion
 
 ```
-
+dotnet ef database update InitialCreate
 ```
 
 ## 7. Verify your application
